@@ -1,0 +1,43 @@
+mat-drawer {
+  flex: 0 0 auto;
+  min-width: 250px;
+}
+
+.mat-drawer-content {
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.utils {
+  margin-left: 25px;
+}
+
+.hr {
+  width: 120%;
+  margin-left: -20%;
+}
+
+.with_margin {
+  margin: -1px 0 0 0;
+}
+
+.inner_list {
+  li:not(:first-child) {
+    padding: 10px 0 0 0;
+  }
+}
+
+#custom-wrap-ellipsis {
+  white-space: normal;
+  line-height: 1.4;
+  font-size: 12px;
+}
+
+
+
+
+
+
