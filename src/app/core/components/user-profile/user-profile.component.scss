@@ -1,0 +1,26 @@
+.input_wrapper {
+  position: relative;
+  input{
+    width: 100%;
+    margin-bottom: 24px;
+    box-shadow: 0 2px 8px hsla(0,0%,65.1%,.25);
+    border-width: 0;
+  }
+}
+
+.profile_right_block {
+  width: 518px;
+}
+
+.user_info_form {
+  margin: 36px 0;
+}
+
+.profile_edit_wrapper{
+  button{
+    width: 225px;
+    color: #fff;
+
+    background-color: #6cdc6c;
+  }
+}

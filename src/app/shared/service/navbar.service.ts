@@ -9,7 +9,7 @@ export class NavbarService {
 
   private readonly commonSidebar: Sidebar = [
     {
-      name: 'a',
+      name: 'akerke',
       list: [
         {
           value: 'value1',
@@ -142,4 +142,5 @@ export class NavbarService {
   commonNavigation(): Observable<Sidebar> {
     return of(this.commonSidebar)
   }
+
 }

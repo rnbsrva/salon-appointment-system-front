@@ -1,15 +1,59 @@
 <div class="container">
   <h1 class="">User profile</h1>
   <div class="profile-wrapper flex">
-      <div class="profile_left_block">
+    <div class="profile_left_block">
       <div class="user_block flex">
         <div class="user_avatar">
 
         </div>
       </div>
+      <div class="links_block">
+        <a>
+
+        </a>
       </div>
-      <div class="profile_right_block">
+      <div class="links_block">
 
       </div>
+    </div>
+    <div class="profile_right_block ml-40">
+      <div class="profile_edit_wrapper">
+        <form [formGroup]="userForm">
+          <h3 class="font-medium text-20 leading-14 m-0">Edit profile</h3>
+          <div class="user_info_form flex flex-col">
+            <div class="input_wrapper">
+              <input class="w-full mb-24"
+                     formControlName="name"
+                     type="text"
+              >
+            </div>
+
+            <div class="input_wrapper">
+              <input class="w-full mb-24"
+                     formControlName="surname"
+                     type="text"
+              >
+            </div>
+
+            <div class="input_wrapper">
+              <input class="w-full mb-24"
+                     formControlName="surname"
+                     type="phone"
+                     prefix="+"
+              >
+            </div>
+
+            <div class="input_wrapper">
+              <input class="w-full mb-24"
+                     formControlName="surname"
+                     type="email"
+              >
+            </div>
+
+            <button class="primary-button">Save</button>
+          </div>
+        </form>
+      </div>
+    </div>
   </div>
 </div>

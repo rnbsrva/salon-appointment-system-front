@@ -1,12 +1,20 @@
 import {NgModule, Optional, SkipSelf} from "@angular/core";
 import { UserProfileComponent } from './components/user-profile/user-profile.component';
+import {ReactiveFormsModule} from "@angular/forms";
+import { PhonePipe } from './pipes/phone.pipe';
 
 @NgModule({
-  imports: [],
-  declarations: [
-    UserProfileComponent
+  imports: [
+    ReactiveFormsModule
   ],
-  providers: []
+    declarations: [
+        UserProfileComponent,
+        PhonePipe
+    ],
+    exports: [
+        UserProfileComponent
+    ],
+    providers: []
 })
 export class CoreModule {
   constructor(@Optional() @SkipSelf() core: CoreModule) {

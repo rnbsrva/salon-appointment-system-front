@@ -1,6 +1,7 @@
 <mat-drawer-container class="flex h-screen">
   <mat-drawer #drawer mode="side" class="w-auto flex flex-col items-start">
     <ul class="list">
+
       <ng-container *ngFor="let el of sidebar$|async">
         <li class="with_margin">
           <mat-accordion>
