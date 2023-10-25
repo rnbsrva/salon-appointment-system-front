@@ -1,7 +1,20 @@
-<header>
-  <div class="container row row-middle flex"></div>
-  <div class="col-auto sides-padding-15 no-desk"></div>
-  <div class="col-auto sides-padding-15 logo"></div>
-  <div class="col-auto sides-padding-15 no-desk"></div>
-  <div class="col-auto sides-padding-15 navigation"></div>
-</header>
+
+<mat-toolbar  color="primary" id="list">
+  <mat-toolbar-row id="bottom_list" class="flex flex-col">
+    <span>Jaz</span>
+    <div *ngFor="let el of sidebar$|async">
+      <ul class="inner_list">
+        <button mat-button [matMenuTriggerFor]="menu">{{el.name}}</button>
+        <mat-menu #menu="matMenu">
+          <ng-container *ngFor="let item of el.list">
+            <li>
+              <a [href]="item.value" class="capitalize ml-1 cursor-pointer">
+                {{ item.value }}
+              </a>
+            </li>
+          </ng-container>
+        </mat-menu>
+      </ul>
+    </div>
+  </mat-toolbar-row>
+</mat-toolbar>

@@ -11,6 +11,8 @@ import {MatIconModule} from "@angular/material/icon";
 import {HttpClientModule} from "@angular/common/http";
 import { FooterComponent } from './components/footer/footer.component';
 import { CommonNavBarComponent } from './components/common-nav-bar/common-nav-bar.component';
+import {MatMenuModule} from "@angular/material/menu";
+import {MatToolbarModule} from "@angular/material/toolbar";
 
 
 @NgModule({
@@ -22,10 +24,10 @@ import { CommonNavBarComponent } from './components/common-nav-bar/common-nav-ba
     MatButtonModule,
     BrowserModule,
     MatListModule,
-    MatIconModule,HttpClientModule
+    MatIconModule, HttpClientModule, MatMenuModule, MatToolbarModule
   ],
   declarations: [SidebarComponent, FooterComponent, CommonNavBarComponent],
-    exports: [SidebarComponent, FooterComponent]
+    exports: [SidebarComponent, FooterComponent, CommonNavBarComponent]
 })
 export class SharedModule {
 }

@@ -12,6 +12,7 @@
                 </mat-panel-title>
               </mat-expansion-panel-header>
               <ul class="inner_list">
+
                 <ng-container *ngFor="let item of el.list">
                   <li>
                     <a [href]="item.value" class="capitalize ml-1 cursor-pointer">
@@ -19,11 +20,13 @@
                     </a>
                   </li>
                 </ng-container>
+
               </ul>
             </mat-expansion-panel>
           </mat-accordion>
         </li>
       </ng-container>
+
       <li class="ml-7 mt-5 mb-3 cursor-pointer font-medium">
         <a href="#">Become a partner</a>
       </li>

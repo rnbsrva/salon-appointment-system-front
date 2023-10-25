@@ -11,6 +11,9 @@ export class UserProfileComponent {
 
   userForm: FormGroup
 
+  phoneNumber:string='77766'
+  // phone:string='aaaaaaaaaa'
+
   constructor(fb: FormBuilder) {
     this.userForm = fb.group(
       {

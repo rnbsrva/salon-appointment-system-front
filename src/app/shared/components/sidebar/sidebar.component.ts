@@ -14,7 +14,10 @@ export class SidebarComponent implements OnInit {
 
   sidebar$: Observable<Sidebar>
 
-  private navService = inject(NavbarService)
+  constructor(
+    private navService:
+      NavbarService) {
+  }
 
   ngOnInit() {
     this.sidebar$ = this.navService.commonNavigation()
