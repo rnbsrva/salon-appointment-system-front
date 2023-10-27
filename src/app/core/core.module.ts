@@ -4,6 +4,7 @@ import {ReactiveFormsModule} from "@angular/forms";
 import { PhonePipe } from './pipes/phone.pipe';
 import { ContactsComponent } from './components/contacts/contacts.component';
 import {CommonModule} from "@angular/common";
+import { ChatComponent } from './components/chat/chat.component';
 
 @NgModule({
   imports: [
@@ -12,7 +13,8 @@ import {CommonModule} from "@angular/common";
     declarations: [
         UserProfileComponent,
         PhonePipe,
-        ContactsComponent
+        ContactsComponent,
+        ChatComponent
     ],
   exports: [
     UserProfileComponent,
