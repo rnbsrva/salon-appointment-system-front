@@ -8,5 +8,4 @@ import {ChatService} from "./core/service/chat.service";
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent{
-  chatService = inject(ChatService)
 }
