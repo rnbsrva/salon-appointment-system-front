@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost&family=PT+Serif&display=swap');
+mat-tree {
+  font-family: 'Jost', sans-serif;
+}
+mat-tree-node {
+  font-weight: bold;
+}
+mat-tree-node:nth-child(n).inner-treatment
+{
+  padding-left: 40px!important;
+}
+
+.inner-treatment {
+  font-weight: 400;
+}

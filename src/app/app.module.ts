@@ -6,19 +6,21 @@ import {AppComponent} from './app.component';
 import {SharedModule} from './shared/shared.module';
 import {HttpClientModule} from "@angular/common/http";
 import {CoreModule} from "./core/core.module";
-import {TuiRootModule} from '@taiga-ui/core';
+import {SalonModule} from "./features/salon/salon.module";
+import {TuiRootModule} from "@taiga-ui/core";
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [
-    BrowserModule,
-    HttpClientModule,
-    AppRoutingModule,
-    SharedModule,
-    BrowserAnimationsModule,
-    CoreModule,
-    TuiRootModule
-  ],
+    imports: [
+        BrowserModule,
+        HttpClientModule,
+        AppRoutingModule,
+        SharedModule,
+        BrowserAnimationsModule,
+        CoreModule,
+        SalonModule,
+        TuiRootModule
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })

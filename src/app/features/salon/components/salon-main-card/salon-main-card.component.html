@@ -1,0 +1,33 @@
+<mat-card class="example-card">
+  <mat-card-header>
+      <mat-card-title>{{salonName}}</mat-card-title>
+    </mat-card-header>
+  <mat-card-content>
+    <mat-divider class="mt-2 mb-3"></mat-divider>
+    <mat-card-subtitle class="text-black mb-2 about-us">About us</mat-card-subtitle>
+
+    <a href="#" class="mt-2 mb-2 inline-block opacity-60">
+      <img src="assets/images/time-svgrepo-com.svg" class="w-5 mr-2 opacity-40 inline-block ">
+      <span>10:00-22:00</span>
+    </a>
+    <br>
+    <a href="#" class="mt-2 mb-2 inline-block opacity-60">
+      <img src="assets/images/phone-svgrepo-com.svg" class="w-5 mr-2 opacity-40 inline-block ">
+      <span>{{phone}}</span>
+    </a>
+    <br>
+    <a href="#" class="mt-2 mb-2 inline-block opacity-60">
+      <img src="assets/images/instagram-svgrepo-com.svg" class="w-5 mr-2  opacity-40 inline-block ">
+      <span>{{instagram}}</span>
+    </a>
+    <br>
+    <a href="#" class="mt-2 mb-2 inline-block opacity-60">
+      <img src="assets/images/address-location.svg" class="w-5 mr-2 opacity-40 inline-block ">
+      <span>{{salonAddress}}</span>
+    </a>
+    <mat-divider class="mt-2 mb-2"></mat-divider>
+  </mat-card-content>
+  <mat-card-actions class="justify-center">
+    <button mat-button class="cust-btn w-11/12 text-white font-semibold">MAKE AN APPOINTMENT</button>
+  </mat-card-actions>
+</mat-card>
