@@ -8,6 +8,7 @@ import {HttpClientModule} from "@angular/common/http";
 import {CoreModule} from "./core/core.module";
 import {SalonModule} from "./features/salon/salon.module";
 import {TuiRootModule} from "@taiga-ui/core";
+import {ChatModule} from "./features/chat/chat.module";
 
 @NgModule({
   declarations: [AppComponent],
@@ -19,7 +20,8 @@ import {TuiRootModule} from "@taiga-ui/core";
         BrowserAnimationsModule,
         CoreModule,
         SalonModule,
-        TuiRootModule
+        TuiRootModule,
+        ChatModule
     ],
   providers: [],
   bootstrap: [AppComponent]
