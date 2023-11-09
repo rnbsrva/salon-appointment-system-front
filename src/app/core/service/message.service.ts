@@ -23,8 +23,8 @@ export class MessageService {
   ): Observable<any> {
     return this.http.get(`${this.MESSAGE_URL}`, {
       params: {
-        salonId: salonId,
-        userId: userId
+        userId,
+        salonId
       }
     })
   }
