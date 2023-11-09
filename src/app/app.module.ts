@@ -27,7 +27,7 @@ import {AuthModule} from "./features/auth/auth.module";
     ChatModule,
     AuthModule
   ],
-  providers: []
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule {
