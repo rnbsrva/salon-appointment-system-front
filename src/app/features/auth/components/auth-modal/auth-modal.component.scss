@@ -1,0 +1,20 @@
+@import "@taiga-ui/core/styles/taiga-ui-local.scss";
+
+//.auth-modal_wrapper {
+//  display: flex;
+//  width: 40%;
+//
+//  .auth-modal_wrapper__forms {
+//    border: 1px solid black;
+//  }
+//}
+
+//@media (max-width: 992px) {
+//  .auth-modal_wrapper {
+//    min-width: 80%;
+//  }
+//}
+
+:host {
+    display: block;
+}

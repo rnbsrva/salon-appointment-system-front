@@ -1,21 +1,18 @@
-import {Injectable} from '@angular/core';
+import {inject, Injectable} from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 import {Observable} from "rxjs";
+import {RegistrationDto} from "../domain/dto/registration.dto";
 
-type UserRegistrationDTO = {}
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
 
-  constructor(
-    private http: HttpClient
-  ) {
-  }
+  private http = inject(HttpClient)
 
   register(
-    req: UserRegistrationDTO
+    req: RegistrationDto
   ): Observable<any> {
     return this.http.post('http://localhost:3000/api/v1/register', req)
   }

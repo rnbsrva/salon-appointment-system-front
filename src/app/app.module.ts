@@ -9,21 +9,25 @@ import {CoreModule} from "./core/core.module";
 import {SalonModule} from "./features/salon/salon.module";
 import {TuiRootModule} from "@taiga-ui/core";
 import {ChatModule} from "./features/chat/chat.module";
+import {AuthModule} from "./features/auth/auth.module";
+
+
 
 @NgModule({
   declarations: [AppComponent],
-    imports: [
-        BrowserModule,
-        HttpClientModule,
-        AppRoutingModule,
-        SharedModule,
-        BrowserAnimationsModule,
-        CoreModule,
-        SalonModule,
-        TuiRootModule,
-        ChatModule
-    ],
-  providers: [],
+  imports: [
+    BrowserModule,
+    HttpClientModule,
+    AppRoutingModule,
+    SharedModule,
+    BrowserAnimationsModule,
+    CoreModule,
+    SalonModule,
+    TuiRootModule,
+    ChatModule,
+    AuthModule
+  ],
+  providers: []
   bootstrap: [AppComponent]
 })
 export class AppModule {

@@ -1,6 +1,7 @@
 import {Component} from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from "@angular/forms";
-import {Gender} from "../../types";
+import { Gender } from '../../domain/enum/gender';
+
 
 @Component({
   selector: 'app-user-profile',
