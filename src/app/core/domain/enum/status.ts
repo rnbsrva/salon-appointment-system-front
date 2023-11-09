@@ -1,0 +1,7 @@
+export enum Status {
+  PENDING,
+  IN_PROCESS,
+  CANCELLED,
+  COMPLETED,
+  RESCHEDULED
+}
