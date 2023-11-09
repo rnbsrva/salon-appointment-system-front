@@ -26,7 +26,7 @@ export class UserStatusService {
 
   supportChatIsOnline(
     salonId: number
-  ) {
+  ) :Observable<any> {
     return this.http.get(`${this.USER_STATUS_URL}user/${salonId}`)
   }
 }
