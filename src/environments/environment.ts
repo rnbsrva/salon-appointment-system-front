@@ -1,5 +1,7 @@
-import { EnvironmentInterface } from './environment-interface'
+import {EnvironmentInterface} from './environment-interface'
+
 export const environment: EnvironmentInterface = {
-    production: false,
-    apiUrl: 'http://localhost:7000/api/v1/',
+  production: false,
+  apiUrl: 'http://localhost:7000/api/v1/',
+  wsUrl: 'http://localhost:7000/api/v1/chat/akerke'
 };

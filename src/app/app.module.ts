@@ -12,7 +12,6 @@ import {ChatModule} from "./features/chat/chat.module";
 import {AuthModule} from "./features/auth/auth.module";
 
 
-
 @NgModule({
   declarations: [AppComponent],
   imports: [
