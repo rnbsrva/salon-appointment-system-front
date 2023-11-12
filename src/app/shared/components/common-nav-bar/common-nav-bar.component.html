@@ -1,4 +1,3 @@
-
 <mat-toolbar  color="primary" id="list">
   <mat-toolbar-row id="bottom_list" class="flex flex-col">
     <span>Jaz</span>
@@ -6,12 +5,13 @@
       <ul class="inner_list">
         <button mat-button [matMenuTriggerFor]="menu">{{el.name}}</button>
         <mat-menu #menu="matMenu">
-          <ng-container *ngFor="let item of el.list">
+          <ng-container *ngFor="let item of el.list;let isLast=last">
             <li>
               <a [href]="item.value" class="capitalize ml-1 cursor-pointer">
                 {{ item.value }}
               </a>
             </li>
+            <hr *ngIf="!isLast">
           </ng-container>
         </mat-menu>
       </ul>

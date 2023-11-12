@@ -1,26 +1,46 @@
-.input_wrapper {
-  position: relative;
-  input{
-    width: 100%;
-    margin-bottom: 24px;
-    box-shadow: 0 2px 8px hsla(0,0%,65.1%,.25);
-    border-width: 0;
-  }
+$body-background: rgb(99, 39, 120);
+
+body {
+  background: $body-background;
 }
 
-.profile_right_block {
-  width: 518px;
+.form-control:focus {
+  box-shadow: none;
+  border-color: #BA68C8;
 }
 
-.user_info_form {
-  margin: 36px 0;
+.profile-button {
+  background: $body-background;
+  box-shadow: none;
+  border: none;
 }
 
-.profile_edit_wrapper{
-  button{
-    width: 225px;
-    color: #fff;
+.profile-button:hover {
+  background: #682773;
+}
 
-    background-color: #6cdc6c;
-  }
+.profile-button:focus {
+  background: #682773;
+  box-shadow: none;
+}
+
+.profile-button:active {
+  background: #682773;
+  box-shadow: none;
+}
+
+.back:hover {
+  color: #682773;
+  cursor: pointer;
+}
+
+.labels {
+  font-size: 11px;
+}
+
+.add-experience:hover {
+  background: #BA68C8;
+  color: #fff;
+  cursor: pointer;
+  border: solid 1px #BA68C8;
 }
