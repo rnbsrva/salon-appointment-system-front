@@ -13,19 +13,19 @@ import {AuthDto} from "../domain/dto/auth.dto";
 })
 export class AuthService {
 
-  private AUTH_URL: string;
+  private readonly AUTH_URL: string;
 
   constructor(
     private readonly http: HttpClient,
     private readonly env: EnvService
   ) {
-    this.AUTH_URL = env.getApiUrl().concat('auth/')
+    this.AUTH_URL = env.getApiUrl()
   }
 
   register(
     req: RegistrationDto
   ): Observable<any> {
-    return this.http.post(`${this.AUTH_URL}register`, req)
+    return this.http.post(`${this.AUTH_URL}auth/register`, req)
   }
 
   requestToResetPassword(

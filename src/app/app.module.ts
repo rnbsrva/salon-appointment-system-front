@@ -24,7 +24,7 @@ import {AuthModule} from "./features/auth/auth.module";
     SalonModule,
     TuiRootModule,
     ChatModule,
-    AuthModule
+    AuthModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

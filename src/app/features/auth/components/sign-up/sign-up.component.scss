@@ -1,0 +1,103 @@
+.mat-stepper-horizontal {
+  margin-top: 8px;
+}
+
+.mat-mdc-form-field {
+  margin-top: 16px;
+  display: block;
+}
+
+mat-form-field {
+}
+
+.title_content {
+  text-align: center;
+  padding: 20px;
+}
+
+.form_wrapper {
+  padding: 10px 0 0 0;
+  display: flex;
+  flex-direction: column;
+}
+
+mat-form-field {
+  width: 100%;
+}
+
+.wrapper {
+  width: 50%;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .wrapper {
+    width: 90%;
+  }
+}
+
+.container {
+  background: #fff;
+  padding: 30px 65px;
+  border-radius: 12px;
+  row-gap: 20px;
+}
+
+
+.container h4 {
+  font-size: 1.25rem;
+  color: #333;
+  font-weight: 500;
+}
+
+form .input-field {
+  flex-direction: row;
+  column-gap: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.input-field input {
+  height: 45px;
+  width: 42px;
+  border-radius: 6px;
+  outline: none;
+  font-size: 1.125rem;
+  text-align: center;
+  border: 1px solid #ddd;
+}
+
+.input-field input:focus {
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+}
+
+.input-field input::-webkit-inner-spin-button,
+.input-field input::-webkit-outer-spin-button {
+  display: none;
+}
+
+#verify_otp_button {
+  margin-top: 25px;
+  width: 100%;
+  color: #fff;
+  font-size: 1rem;
+  border: none;
+  padding: 9px 0;
+  cursor: pointer;
+  border-radius: 6px;
+  pointer-events: none;
+  background: #6e93f7;
+  transition: all 0.2s ease;
+
+  &.active {
+    background: #4070f4;
+    pointer-events: auto;
+  }
+
+  &:hover {
+    background: #0e4bf1;
+  }
+}
+
+.otp_input{
+}
