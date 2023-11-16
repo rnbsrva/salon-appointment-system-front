@@ -1,7 +1,8 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import {Observable} from "rxjs";
 import {Sidebar} from "../../types";
 import {NavbarService} from "../../service/navbar.service";
+import { CdkOverlayOrigin } from '@angular/cdk/overlay';
 
 @Component({
   selector: 'app-common-nav-bar',
@@ -11,6 +12,9 @@ import {NavbarService} from "../../service/navbar.service";
 export class CommonNavBarComponent implements OnInit{
 
   sidebar$: Observable<Sidebar>
+
+  @ViewChild('menu') menu: ElementRef;
+
 
   constructor(
     private navService:

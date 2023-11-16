@@ -4,11 +4,22 @@
   width: 80%;
 }
 
+.backgroun {
+  background-color: white;
+}
+
 #list {
   align-items: center;
   display: flex;
 }
 
+button {
+  color: #3a3636;
+  font-size: 16px;
+  font-weight: bolder;
+}
+
 li {
   padding: 10px;
 }
+

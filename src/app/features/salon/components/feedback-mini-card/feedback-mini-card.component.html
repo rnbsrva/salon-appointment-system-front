@@ -1,0 +1,20 @@
+<mat-card class="example-card">
+  <mat-card-header>
+    <div mat-card-avatar class="example-header-image"></div>
+    <div class="ml-4"><mat-card-title>{{username}}</mat-card-title></div>
+  </mat-card-header>
+  <mat-card-content>
+    <div><p>{{longText}}</p></div>
+
+  </mat-card-content>
+  <div class="m-4">
+    <mat-card-subtitle>
+      <span style="position: absolute; bottom: 0; left: 0px;" class="ml-4 mb-2">
+        {{getFormattedDate()}}
+      </span></mat-card-subtitle>
+    <mat-card-subtitle>
+      <span style="position: absolute; bottom: 0; right: 0px;" class="mr-4 mb-2">
+        Master: {{masterName}}
+      </span></mat-card-subtitle>
+  </div>
+</mat-card>

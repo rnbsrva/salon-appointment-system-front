@@ -13,6 +13,8 @@ import {TuiAccordionModule} from "@taiga-ui/kit";
 import {MatExpansionModule} from "@angular/material/expansion";
 import {MatSidenavModule} from "@angular/material/sidenav";
 import {MatIconModule} from "@angular/material/icon";
+import {MatDividerModule} from "@angular/material/divider";
+import {MatProgressSpinnerModule} from "@angular/material/progress-spinner";
 
 
 @NgModule({
@@ -27,6 +29,8 @@ import {MatIconModule} from "@angular/material/icon";
     MatExpansionModule,
     MatSidenavModule,
     MatIconModule,
+    MatDividerModule,
+    MatProgressSpinnerModule,
   ],
   declarations: [SidebarComponent, FooterComponent, CommonNavBarComponent],
   exports: [SidebarComponent, FooterComponent, CommonNavBarComponent]

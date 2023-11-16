@@ -1,11 +1,18 @@
-<mat-toolbar  color="primary" id="list">
+<mat-toolbar class="backgroun border-b border-gray-300 sticky bottom-full" id="list">
   <mat-toolbar-row id="bottom_list" class="flex flex-col">
-    <span>Jaz</span>
+    <img class="relative" src="assets/images/logo.svg">
     <div *ngFor="let el of sidebar$|async">
+
       <ul class="inner_list">
-        <button mat-button [matMenuTriggerFor]="menu">{{el.name}}</button>
+
+        <button mat-button [matMenuTriggerFor]="menu"
+                 #menuTrigger="matMenuTrigger" (mouseenter)="menuTrigger.openMenu()"
+        >{{el.name}}</button>
+
         <mat-menu #menu="matMenu">
+
           <ng-container *ngFor="let item of el.list;let isLast=last">
+
             <li>
               <a [href]="item.value" class="capitalize ml-1 cursor-pointer">
                 {{ item.value }}

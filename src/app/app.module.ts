@@ -13,7 +13,7 @@ import {AuthModule} from "./features/auth/auth.module";
 
 
 @NgModule({
-  declarations: [AppComponent],
+    declarations: [AppComponent],
   imports: [
     BrowserModule,
     HttpClientModule,

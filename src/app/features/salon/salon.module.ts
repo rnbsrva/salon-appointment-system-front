@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import {CommonModule, NgOptimizedImage} from '@angular/common';
 import { SalonCardComponent } from './components/salon-card/salon-card.component';
 import {MatCardModule} from "@angular/material/card";
 import {MatButtonModule} from "@angular/material/button";
@@ -8,6 +8,14 @@ import { TreatmentsPanelComponent } from './components/treatments-panel/treatmen
 import {MatTreeModule} from "@angular/material/tree";
 import {MatIconModule} from "@angular/material/icon";
 import {MatListModule} from "@angular/material/list";
+import { TreatmentCategoryCardComponent } from './components/treatment-category-card/treatment-category-card.component';
+import { FeedbackCardComponent } from './components/feedback-card/feedback-card.component';
+import { FeedbackMiniCardComponent } from './components/feedback-mini-card/feedback-mini-card.component';
+import { SalonImageGalleryComponent } from './components/salon-image-gallery/salon-image-gallery.component';
+import { CoverPageComponent } from './components/cover-page/cover-page.component';
+import {MatFormFieldModule} from "@angular/material/form-field";
+import {ReactiveFormsModule} from "@angular/forms";
+import {MatInputModule} from "@angular/material/input";
 
 
 
@@ -15,12 +23,22 @@ import {MatListModule} from "@angular/material/list";
   declarations: [
     SalonCardComponent,
     SalonMainCardComponent,
-    TreatmentsPanelComponent
+    TreatmentsPanelComponent,
+    TreatmentCategoryCardComponent,
+    FeedbackCardComponent,
+    FeedbackMiniCardComponent,
+    SalonImageGalleryComponent,
+    CoverPageComponent
   ],
     exports: [
         SalonCardComponent,
         TreatmentsPanelComponent,
-        SalonMainCardComponent
+        SalonMainCardComponent,
+        TreatmentCategoryCardComponent,
+        FeedbackCardComponent,
+        FeedbackMiniCardComponent,
+        SalonImageGalleryComponent,
+        CoverPageComponent
     ],
     imports: [
         CommonModule,
@@ -28,7 +46,11 @@ import {MatListModule} from "@angular/material/list";
         MatButtonModule,
         MatTreeModule,
         MatIconModule,
-        MatListModule
+        MatListModule,
+        NgOptimizedImage,
+        MatFormFieldModule,
+        ReactiveFormsModule,
+        MatInputModule
     ]
 })
 export class SalonModule { }
