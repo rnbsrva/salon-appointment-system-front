@@ -14,8 +14,13 @@ import { FeedbackMiniCardComponent } from './components/feedback-mini-card/feedb
 import { SalonImageGalleryComponent } from './components/salon-image-gallery/salon-image-gallery.component';
 import { CoverPageComponent } from './components/cover-page/cover-page.component';
 import {MatFormFieldModule} from "@angular/material/form-field";
-import {ReactiveFormsModule} from "@angular/forms";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {MatInputModule} from "@angular/material/input";
+import { AppointmentCardComponent } from './components/appointment-card/appointment-card.component';
+import {MatStepperModule} from "@angular/material/stepper";
+import {MatMenuModule} from "@angular/material/menu";
+import {MatRadioModule} from "@angular/material/radio";
+import {MatGridListModule} from "@angular/material/grid-list";
 
 
 
@@ -28,18 +33,20 @@ import {MatInputModule} from "@angular/material/input";
     FeedbackCardComponent,
     FeedbackMiniCardComponent,
     SalonImageGalleryComponent,
-    CoverPageComponent
+    CoverPageComponent,
+    AppointmentCardComponent
   ],
-    exports: [
-        SalonCardComponent,
-        TreatmentsPanelComponent,
-        SalonMainCardComponent,
-        TreatmentCategoryCardComponent,
-        FeedbackCardComponent,
-        FeedbackMiniCardComponent,
-        SalonImageGalleryComponent,
-        CoverPageComponent
-    ],
+  exports: [
+    SalonCardComponent,
+    TreatmentsPanelComponent,
+    SalonMainCardComponent,
+    TreatmentCategoryCardComponent,
+    FeedbackCardComponent,
+    FeedbackMiniCardComponent,
+    SalonImageGalleryComponent,
+    CoverPageComponent,
+    AppointmentCardComponent
+  ],
     imports: [
         CommonModule,
         MatCardModule,
@@ -50,7 +57,12 @@ import {MatInputModule} from "@angular/material/input";
         NgOptimizedImage,
         MatFormFieldModule,
         ReactiveFormsModule,
-        MatInputModule
+        MatInputModule,
+        MatStepperModule,
+        MatMenuModule,
+        MatRadioModule,
+        MatGridListModule,
+        FormsModule
     ]
 })
 export class SalonModule { }
