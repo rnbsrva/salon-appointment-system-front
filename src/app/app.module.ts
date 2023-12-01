@@ -7,6 +7,7 @@ import {SharedModule} from './shared/shared.module';
 import {HttpClientModule} from "@angular/common/http";
 import {CoreModule} from "./core/core.module";
 import {SalonModule} from "./features/salon/salon.module";
+import {MatNativeDateModule} from '@angular/material/core';
 import {TuiRootModule} from "@taiga-ui/core";
 import {ChatModule} from "./features/chat/chat.module";
 import {AuthModule} from "./features/auth/auth.module";
@@ -24,6 +25,7 @@ import {AuthModule} from "./features/auth/auth.module";
     SalonModule,
     TuiRootModule,
     ChatModule,
+    MatNativeDateModule,
     AuthModule,
   ],
   providers: [],

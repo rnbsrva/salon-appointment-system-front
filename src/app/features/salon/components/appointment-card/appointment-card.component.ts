@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
-import {FormBuilder, Validators} from "@angular/forms";
 import {MatDatepickerModule} from '@angular/material/datepicker';
+import {MatInputModule} from '@angular/material/input';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatNativeDateModule} from '@angular/material/core';
 
 @Component({
   selector: 'app-appointment-card',
@@ -8,26 +10,29 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
   styleUrls: ['./appointment-card.component.scss']
 })
 export class AppointmentCardComponent {
-  firstFormGroup = this._formBuilder.group({
-    firstCtrl: ['', Validators.required],
-  });
-  secondFormGroup = this._formBuilder.group({
-    secondCtrl: ['', Validators.required],
-  });
-  isLinear = false;
   treatmentName = "Treatment Name";
   salonName = "Salon Name"
-  selectedTime: string;
   selectedMaster: string;
-  selectedDate: string;
+  selectedDate: Date;
+  selectedTime: string;
+  comment: string;
 
-  onSubmit(): void {
-    // @ts-ignore
-    const selectedDate = this.secondFormGroup.get('secondCtrl').value;
-    console.log('Selected Date:', selectedDate);
+  masters: string[] = ['Master 1', 'Master 2', 'Master 3']; // Replace with your master data
+  availableTimes: string[] = ['10:00 AM', '11:00 AM', '02:00 PM', '03:00 PM', '04:00 PM']; // Replace with your available times
+
+  makeAppointment() {
+    // Logic to handle appointment creation
+    console.log('Appointment details:', {
+      salonName: this.salonName,
+      treatmentName: this.treatmentName,
+      selectedMaster: this.selectedMaster,
+      selectedDate: this.selectedDate,
+      selectedTime: this.selectedTime,
+      comment: this.comment
+    });
   }
 
-  list = [
+   list = [
     {
       id: 1,
       name: "Alisson Sweet"
@@ -40,9 +45,9 @@ export class AppointmentCardComponent {
       id: 3,
       name: "Nathaniel Ramen"
     }
-    ]
+    ];
 
-  workTimes = [
+   workTimes = [
     {
       value: "13:00"
     },
@@ -61,7 +66,6 @@ export class AppointmentCardComponent {
     {
       value: "16:00"
     },
-  ]
+  ];
 
-  constructor(private _formBuilder: FormBuilder) {}
 }

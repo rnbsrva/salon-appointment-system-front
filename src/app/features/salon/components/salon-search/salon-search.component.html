@@ -1,0 +1,39 @@
+<!-- search.component.html -->
+
+  <div class="flex flex-col justify-center items-center text-start">
+    <div class="m-3">
+      <label  for="name">Salon Name:</label>
+      <input type="text" class="form-control" id="name" placeholder="Enter salon name" [(ngModel)]="salonSearch.name" />
+    </div>
+
+    <div>
+      <label for="street">Street:</label>
+      <input type="text" id="street" class="form-control" placeholder="Enter street name" [(ngModel)]="salonSearch.street" />
+    </div>
+
+  <div class="m-3">
+    <label for="city">City:</label>
+    <input type="text" id="city" class="form-control"  placeholder="Enter city name" [(ngModel)]="salonSearch.city" />
+  </div>
+  <div>
+    <label for="state">State:</label>
+    <input type="text" id="state" class="form-control"  placeholder="Enter state name" [(ngModel)]="salonSearch.state" />
+  </div>
+  <div class="m-3">
+  <label for="treatmentName">Treatment Name:</label>
+  <input type="text" id="treatmentName" class="form-control"  placeholder="Enter treatment name" [(ngModel)]="salonSearch.treatmentName" />
+  </div>
+    <div>
+  <button class="btn btn-primary" (click)="search()">Search</button>
+    </div>
+    <div *ngIf="searchResults.length > 0"  class="row">
+      <mat-card *ngFor="let result of searchResults" class="example-card col-md-6" >
+        <img mat-card-image [src]="result.mainImageUrl" alt="Photo">
+        <mat-card-content>
+          <mat-card-title>{{ result.name }}</mat-card-title>
+          <mat-card-subtitle>{{ result.description }}
+          </mat-card-subtitle>
+        </mat-card-content>
+      </mat-card>
+    </div>
+</div>

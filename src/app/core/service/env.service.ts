@@ -9,4 +9,8 @@ export class EnvService {
   getApiUrl() {
     return environment.apiUrl;
   }
+
+  getWSUrl() {
+    return environment.wsUrl;
+  }
 }

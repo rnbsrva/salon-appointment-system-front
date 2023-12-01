@@ -22,16 +22,16 @@ export class SignUpComponent  {
     this.registrationForm = _fb.group({
       name: ['', [Validators.maxLength(64), Validators.required]],
       surname: ['', [Validators.maxLength(64), Validators.required]],
-      phone: ['', Validators.required],
-      gender: [Gender.FEMALE],
+      phoneNumber: ['', Validators.required],
+      // gender: [Gender.FEMALE],
       email: ['', [Validators.email, Validators.required]],
       password: ['', PasswordValidator()],
-      address: _fb.group({
-        state: ["", Validators.required],
-        city: ["", Validators.required],
-        street: ["", Validators.required],
-        houseNumber: ["", Validators.required]
-      })
+      // address: _fb.group({
+      //   state: ["", Validators.required],
+      //   city: ["", Validators.required],
+      //   street: ["", Validators.required],
+      //   houseNumber: ["", Validators.required]
+      // })
     })
     this.otpForm = _fb.group({
       number1: [undefined, Validators.required, Validators.min(0), Validators.max(9)],

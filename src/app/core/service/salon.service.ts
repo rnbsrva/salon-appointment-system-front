@@ -44,6 +44,8 @@ export class SalonService {
       params = params.set('size', size.toString());
     }
 
+    console.log( this.http.post(`${this.SALON_URL}search`, salonSearchDetails, {params}));
+
     return this.http.post(`${this.SALON_URL}search`, salonSearchDetails, {params});
   }
 

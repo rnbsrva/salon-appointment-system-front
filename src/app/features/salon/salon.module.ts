@@ -21,6 +21,12 @@ import {MatStepperModule} from "@angular/material/stepper";
 import {MatMenuModule} from "@angular/material/menu";
 import {MatRadioModule} from "@angular/material/radio";
 import {MatGridListModule} from "@angular/material/grid-list";
+import {MatDatepickerModule} from "@angular/material/datepicker";
+
+import {Component} from '@angular/core';
+import {MatNativeDateModule} from '@angular/material/core';
+import {MatSelectModule} from "@angular/material/select";
+import { SalonSearchComponent } from './components/salon-search/salon-search.component';
 
 
 
@@ -34,7 +40,8 @@ import {MatGridListModule} from "@angular/material/grid-list";
     FeedbackMiniCardComponent,
     SalonImageGalleryComponent,
     CoverPageComponent,
-    AppointmentCardComponent
+    AppointmentCardComponent,
+    SalonSearchComponent
   ],
   exports: [
     SalonCardComponent,
@@ -45,12 +52,14 @@ import {MatGridListModule} from "@angular/material/grid-list";
     FeedbackMiniCardComponent,
     SalonImageGalleryComponent,
     CoverPageComponent,
-    AppointmentCardComponent
+    AppointmentCardComponent,
+    SalonSearchComponent
   ],
     imports: [
         CommonModule,
         MatCardModule,
         MatButtonModule,
+        MatNativeDateModule,
         MatTreeModule,
         MatIconModule,
         MatListModule,
@@ -62,7 +71,9 @@ import {MatGridListModule} from "@angular/material/grid-list";
         MatMenuModule,
         MatRadioModule,
         MatGridListModule,
-        FormsModule
+        FormsModule,
+        MatDatepickerModule,
+        MatSelectModule
     ]
 })
 export class SalonModule { }
