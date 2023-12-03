@@ -7,6 +7,7 @@ import {EnvService} from "./env.service";
 import {ResetPasswordDto} from "../domain/dto/reset-password.dto";
 import {ForgotPasswordDto} from "../domain/dto/forgot-password.dto";
 import {AuthDto} from "../domain/dto/auth.dto";
+import { OptDto } from '../domain/dto/otp.dto';
 
 @Injectable({
   providedIn: 'root'
@@ -54,13 +55,9 @@ export class AuthService {
   }
 
   emailConfirmation(
-    token: string
+    otp: OptDto
   ): Observable<any> {
-    return this.http.get(`${this.AUTH_URL}email-confirmation`, {
-      params: {
-        verification_token: token
-      }
-    })
+    return this.http.post(`${this.AUTH_URL}email-confirmation`, otp)
   }
 
   authenticate(
@@ -69,5 +66,22 @@ export class AuthService {
     return this.http.post(`${this.AUTH_URL}authenticate`, auth)
   }
 
+  resendEmail():Observable<any>{
+    return this.http.post(`${this.AUTH_URL}resend-email`,{})
+  }
+
+  logout():Observable<any>{
+    return this.http.post(`${this.AUTH_URL}logout`,{})
+  }
+
+  refreshToken(){
+    let refreshToken = localStorage.getItem('refresh_token')
+    if(!refreshToken){
+      return
+    }
+    return this.http.post(`${this.AUTH_URL}refresh-token`,{},{params:{
+      refreshToken
+    }})
+  }
 
 }
