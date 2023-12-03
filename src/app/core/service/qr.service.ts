@@ -8,7 +8,7 @@ import {Observable} from "rxjs";
 })
 export class QrService {
 
-  private QR_URL: string;
+  private readonly QR_URL: string;
 
   constructor(
     private readonly http: HttpClient,
@@ -20,7 +20,7 @@ export class QrService {
   generate(
     data: string
   ): Observable<any> {
-    return this.http.get(`${this.QR_URL}generate`, {
+    return this.http.get(`http://localhost:9999/api/v1/qr/generate`, {
       params: {data},
       responseType: 'blob'
     })

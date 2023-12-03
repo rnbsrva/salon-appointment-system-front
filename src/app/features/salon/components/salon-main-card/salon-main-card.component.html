@@ -30,4 +30,7 @@
   <mat-card-actions class="justify-center">
     <button mat-button class="cust-btn w-11/12 text-white font-semibold">MAKE AN APPOINTMENT</button>
   </mat-card-actions>
+  <button mat-button id="qr-btn" class="cust-btn w-11/12 text-white font-semibold" (click)="openQr()">GET QR TO SHARE</button>
 </mat-card>
+
+<app-qr-modal [url]="currentUrl()" *ngIf="qrOpened" (closeModalEvent)="qrOpened=false"></app-qr-modal>
