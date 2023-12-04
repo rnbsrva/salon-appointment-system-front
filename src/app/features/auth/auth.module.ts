@@ -10,6 +10,7 @@ import {MatInputModule} from "@angular/material/input";
 import {MatSelectModule} from "@angular/material/select";
 import {MatCheckboxModule} from "@angular/material/checkbox";
 import {AuthRoutingModule} from './auth-routing.module'
+import {MatButtonModule} from "@angular/material/button";
 
 @NgModule({
   declarations: [
@@ -18,18 +19,19 @@ import {AuthRoutingModule} from './auth-routing.module'
   exports: [
     SignUpComponent
   ],
-  imports: [
-    CommonModule,
-    MatIconModule,
-    MatTabsModule,
-    ReactiveFormsModule,
-    TuiInputModule,
-    MatStepperModule,
-    MatInputModule,
-    MatSelectModule,
-    MatCheckboxModule,
-    AuthRoutingModule
-  ]
+    imports: [
+        CommonModule,
+        MatIconModule,
+        MatTabsModule,
+        ReactiveFormsModule,
+        TuiInputModule,
+        MatStepperModule,
+        MatInputModule,
+        MatSelectModule,
+        MatCheckboxModule,
+        AuthRoutingModule,
+        MatButtonModule
+    ]
 })
 export class AuthModule {
 }

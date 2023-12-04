@@ -35,6 +35,7 @@ export class SignUpComponent  {
   }
 
   requestToRegister() {
+    console.log("requestToRegister");
     let r = this.registrationForm.value
     this._authService.register(r)
       .subscribe(res => {
@@ -56,14 +57,17 @@ export class SignUpComponent  {
   }
 
   sendOtp() {
-    console.log('f')
+    console.log('sendOtp')
     let otp = {
       otp: this.getOtpFromForm(),
-      email:JSON.parse(localStorage.getItem('user')!).email
+      email: this.registrationForm.get('email')?.value
     }
     console.log(otp)
     this._authService.emailConfirmation(otp)
-    .subscribe(res => console.log(res))
+        .subscribe(res => {
+            console.log(res)
+
+  })
   }
 
   getOtpFromForm(){
@@ -73,8 +77,7 @@ export class SignUpComponent  {
     let number4 = this.otpForm.get('number4')!.value!
     let number5 = this.otpForm.get('number5')!.value!
     let number6 = this.otpForm.get('number6')!.value!
-    let otp = +`${number1}${number2}${number3}${number4}${number5}${number6}`
-    return otp;
+    return +`${number1}${number2}${number3}${number4}${number5}${number6}`;
   }
 
 }

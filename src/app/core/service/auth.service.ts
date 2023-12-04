@@ -32,13 +32,13 @@ export class AuthService {
   requestToResetPassword(
     req: ResetPasswordDto
   ): Observable<any> {
-    return this.http.patch(`${this.AUTH_URL}reset-password`, req)
+    return this.http.patch(`${this.AUTH_URL}auth/reset-password`, req)
   }
 
   requestForgotPassword(
     email: string
   ): Observable<any> {
-    return this.http.get(`${this.AUTH_URL}request-forgot-password`, {
+    return this.http.get(`${this.AUTH_URL}auth/request-forgot-password`, {
       params: {email}
     })
   }
@@ -47,7 +47,7 @@ export class AuthService {
     req: ForgotPasswordDto,
     token: string
   ): Observable<any> {
-    return this.http.post(`${this.AUTH_URL}confirm-forgot-password`, req, {
+    return this.http.post(`${this.AUTH_URL}auth/confirm-forgot-password`, req, {
       params: {
         verification_token: token
       }
@@ -57,21 +57,21 @@ export class AuthService {
   emailConfirmation(
     otp: OptDto
   ): Observable<any> {
-    return this.http.post(`${this.AUTH_URL}email-confirmation`, otp)
+    return this.http.post(`${this.AUTH_URL}auth/confirm-email`, otp)
   }
 
   authenticate(
     auth: AuthDto
   ) {
-    return this.http.post(`${this.AUTH_URL}authenticate`, auth)
+    return this.http.post(`${this.AUTH_URL}auth/authenticate`, auth)
   }
 
   resendEmail():Observable<any>{
-    return this.http.post(`${this.AUTH_URL}resend-email`,{})
+    return this.http.post(`${this.AUTH_URL}auth/resend-email`,{})
   }
 
   logout():Observable<any>{
-    return this.http.post(`${this.AUTH_URL}logout`,{})
+    return this.http.post(`${this.AUTH_URL}auth/logout`,{})
   }
 
   refreshToken(){
@@ -79,7 +79,7 @@ export class AuthService {
     if(!refreshToken){
       return
     }
-    return this.http.post(`${this.AUTH_URL}refresh-token`,{},{params:{
+    return this.http.post(`${this.AUTH_URL}auth/refresh-token`,{},{params:{
       refreshToken
     }})
   }
