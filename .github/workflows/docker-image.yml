@@ -38,6 +38,7 @@ jobs:
           DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
 
   push:
+    needs: build
     runs-on: ubuntu-latest
     steps:
       - name: Log in to Docker Hub
