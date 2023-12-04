@@ -20,7 +20,7 @@ export class QrService {
   generate(
     data: string
   ): Observable<any> {
-    return this.http.get(`http://localhost:9999/api/v1/qr/generate`, {
+    return this.http.get(this.QR_URL+ `generate`, {
       params: {data},
       responseType: 'blob'
     })
