@@ -30,6 +30,9 @@ jobs:
 
       - name: Build the Docker image
         run: docker build . --file Dockerfile --tag rnbsrva/sas-front:latest
+
+      - name: Tag image
+        run:  docker tag rnbsrva/sas-front rnbsrva/sas-front:latest
         env:
           DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
           DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
